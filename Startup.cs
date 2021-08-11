@@ -17,6 +17,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
 using techlink.Persons;
+using techlink.Posts;
 using techlink.Db;
 using techlink.Jwt;
 
@@ -41,6 +42,9 @@ namespace techlink
 
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IPersonService, PersonService>();
+
+            services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IPostService, PostService>();
 
             services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<ITokenService, TokenService>();

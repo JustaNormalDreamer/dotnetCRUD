@@ -1,5 +1,4 @@
-using System;
-using System.ComponentModel.DataAnnotations;  
+using System; 
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace techlink.Persons
@@ -12,7 +11,6 @@ namespace techlink.Persons
             set;
         }
 
-        [Required]
         private string name;
 
         public string Name {
@@ -25,7 +23,6 @@ namespace techlink.Persons
             set;
         }
 
-        [Required]
         public string email {
             get; 
             set;
