@@ -1,0 +1,19 @@
+@model techlink.Posts.Post
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h2 class="">@ViewBag.Post.Name</h2>
+            <p class="lead">@ViewBag.Post.Description</p>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Edit" asp-controller="Blog" asp-route-id="@ViewBag.Post.Id" class="btn btn-secondary">Edit</a>
+
+            <form asp-controller="Blog" asp-action="Destroy" asp-route-id="@ViewBag.Post.Id">
+                <input type="hidden" name="_method" value="DELETE" />
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
