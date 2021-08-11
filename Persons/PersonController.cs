@@ -8,7 +8,7 @@ using techlink.Persons;
 namespace techlink.Controllers
 {
     [ApiController]
-    [Route("persons")]
+    [Route("api/v1/persons")]
     public class PersonController : Controller
     {
         private IPersonService _personService; 

@@ -8,7 +8,7 @@ using techlink.Posts;
 namespace techlink.Controllers
 {
     [ApiController]
-    [Route("posts")]
+    [Route("api/v1/posts")]
     public class PostController : Controller
     {
         private IPostService _postService; 

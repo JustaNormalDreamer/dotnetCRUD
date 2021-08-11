@@ -1,0 +1,37 @@
+@model techlink.Posts.Post
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <p class="lead">Edit Post</p>
+        </div>
+        <div class="card-body"> 
+            <form asp-action="Update" asp-controller="Blog" asp-route-id="@ViewBag.Post.Id" method="POST">
+                 <div class="form-errors" asp-validation-summary="All">
+                    <span>Please correct the following errors</span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name">Post Name</label>
+                    <input type="text" class="form-control" placeholder="Enter post name" asp-for="Name" value="@ViewBag.Post.Name" />
+                    <span class="invalid-feedback" asp-validation-for="Name"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description">Post Description</label>
+                    <textarea class="form-control" placeholder="Enter post description" asp-for="Description">@ViewBag.Post.Description</textarea>
+                    <span class="invalid-feedback" asp-validation-for="Description"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Status">Post Status</label>
+                    <select asp-for="Status" class="form-control">
+                        <option value="false">Draft</option>
+                        <option value="true">Publish</option>
+                    </select>
+                    <span class="invalid-feedback" asp-validation-for="Status"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
