@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using techlink.Persons;
+using techlink.Posts;
 
 namespace techlink.Db
 {
@@ -13,6 +14,12 @@ namespace techlink.Db
         }
 
         public DbSet<Person> Persons 
+        {
+            get;
+            init;
+        }
+
+        public DbSet<Post> Posts
         {
             get;
             init;

@@ -1,18 +1,9 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using techlink.Generic.Interfaces;
 
 namespace techlink.Persons
 {
-    public interface IPersonRepository
+    public interface IPersonRepository : IBaseRepository<Person, string>
     {
-        Task<IEnumerable<Person>> all();
 
-        Task<Person> show(string id);
-
-        Task store(Person person);
-
-        Task update(string id, Person person);
-
-        Task delete(string id);
     }
 }
