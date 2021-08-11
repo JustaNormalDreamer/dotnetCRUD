@@ -49,3 +49,10 @@ F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.EntityFrameworkCor
 F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\BCrypt.Net-Next.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+F:\Users\dipesh\Desktop\dotnet-mvc\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
