@@ -13,7 +13,7 @@ namespace techlink.Posts
             _postService = postService;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "PostsIndex")]
         public async Task<IActionResult> Index()
         {
             ViewData["Title"] = "Techlink Blog Page";
@@ -39,7 +39,6 @@ namespace techlink.Posts
         [HttpPost]
         public async Task<IActionResult> Store(PostRequest postRequest)
         {
-            string message = "";
             if(ModelState.IsValid) {
                 Post post = new() {
                     Name = postRequest.name,
@@ -47,13 +46,11 @@ namespace techlink.Posts
                     Status = postRequest.status,
                 };
                 await _postService.store(post);
-
-                message = "Post has been created successfully.";
             } else {
                 return View("Views/Blog/Create.cshtml");
             }
 
-            return Content(message);
+            return RedirectToRoute("PostsIndex");
         }
 
         [HttpGet("{id}/edit")]
@@ -63,10 +60,9 @@ namespace techlink.Posts
             return View();
         }
 
-        [HttpPut("{id}")]
+        [HttpPost("{id}/update")]
         public async Task<IActionResult> Update(string id, PostRequest postRequest)
         {
-            string message = "";
             if(ModelState.IsValid) {
                 Post post = new() {
                     Name = postRequest.name,
@@ -74,21 +70,19 @@ namespace techlink.Posts
                     Status = postRequest.status,
                 };
                 await _postService.update(id, post);
-
-                message = "Post has been updated successfully.";
             } else {
                 return View("Views/Blog/Edit.cshtml");
             }
 
-            return Content(message);
+            return RedirectToRoute("PostsIndex");
         }
 
 
-        [HttpDelete("{id}")]
+        [HttpPost("{id}/delete")]
         public async Task<IActionResult> Destroy(string id)
         {
             await _postService.delete(id);
-            return RedirectToRoute("posts");
+            return RedirectToRoute("PostsIndex");
         }
     }
 }
